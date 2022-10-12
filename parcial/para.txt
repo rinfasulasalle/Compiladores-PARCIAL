@@ -1,0 +1,4 @@
+para (variable i = 0 ; i < 10 ; variable i = i + 1){
+  constante c = "hola"
+  variable d = 10.2
+}

@@ -1,0 +1,89 @@
+digraph hello {
+	A [label=PROGMAIN]
+	C [label=MIENTRAS]
+	A -> C
+	B [label=PROGMAIN]
+	A -> B
+	H [label=while]
+	C -> H
+	G [label=lparen]
+	C -> G
+	F [label=COMPARACION]
+	C -> F
+	E [label=rparen]
+	C -> E
+	D [label=CUERPO]
+	C -> D
+	L [label=TYPEFACT]
+	F -> L
+	K [label=COMPARATIONSYMBOLS]
+	F -> K
+	J [label=TYPEFACT]
+	F -> J
+	I [label=EXTENDCOMPARATION]
+	F -> I
+	M [label=id]
+	L -> M
+	N [label=minor]
+	K -> N
+	O [label=number]
+	J -> O
+	Q [label=LOGICCOMPARATION]
+	I -> Q
+	P [label=COMPARACION]
+	I -> P
+	R [label=and]
+	Q -> R
+	V [label=TYPEFACT]
+	P -> V
+	U [label=COMPARATIONSYMBOLS]
+	P -> U
+	T [label=TYPEFACT]
+	P -> T
+	S [label=EXTENDCOMPARATION]
+	P -> S
+	W [label=id]
+	V -> W
+	X [label=equality]
+	U -> X
+	Y [label=string]
+	T -> Y
+	Z [label="Ɛ"]
+	S -> Z
+	DA [label=lb]
+	D -> DA
+	CA [label=PROGMAIN]
+	D -> CA
+	BA [label=rb]
+	D -> BA
+	AA [label=CUERPOFACT]
+	D -> AA
+	FA [label=ASIGNACION]
+	CA -> FA
+	EA [label=PROGMAIN]
+	CA -> EA
+	JA [label=TYPEVAR]
+	FA -> JA
+	IA [label=id]
+	FA -> IA
+	HA [label=assynament]
+	FA -> HA
+	GA [label=EXPRESION]
+	FA -> GA
+	KA [label=var]
+	JA -> KA
+	MA [label=TYPEFACT]
+	GA -> MA
+	LA [label=EXPRESIONFACT]
+	GA -> LA
+	NA [label=number]
+	MA -> NA
+	OA [label="Ɛ"]
+	LA -> OA
+	PA [label="Ɛ"]
+	EA -> PA
+	QA [label="Ɛ"]
+	AA -> QA
+	RA [label="Ɛ"]
+	B -> RA
+}

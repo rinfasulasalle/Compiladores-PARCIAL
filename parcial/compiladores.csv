@@ -1,0 +1,43 @@
+,$,OPERACION,comma,id,function,lparen,rparen,rb,lb,plus,minor,divide,multi,percent,power,var,const,let,TRUE,FALSE,number,string,assynament,menorequal,greaterequal,equality,distinct,greater,and,or,if,CONDICIONALELSEIF,else,for,semicolon,while
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+S,S ::= PROGMAIN $,S ::= PROGMAIN $,,S ::= PROGMAIN $,S ::= PROGMAIN $,,,,,,,,,,,S ::= PROGMAIN $,S ::= PROGMAIN $,S ::= PROGMAIN $,S ::= PROGMAIN $,S ::= PROGMAIN $,S ::= PROGMAIN $,S ::= PROGMAIN $,,,,,,,,,S ::= PROGMAIN $,,,S ::= PROGMAIN $,,S ::= PROGMAIN $
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PROGMAIN,PROGMAIN ::= '',PROGMAIN ::= OPERACION PROGMAIN,,PROGMAIN ::= COMPARACION PROGMAIN,PROGMAIN ::= FUNCION PROGMAIN,,,PROGMAIN ::= '',PROGMAIN ::= '',,,,,,,PROGMAIN ::= ASIGNACION PROGMAIN,PROGMAIN ::= ASIGNACION PROGMAIN,PROGMAIN ::= ASIGNACION PROGMAIN,PROGMAIN ::= COMPARACION PROGMAIN,PROGMAIN ::= COMPARACION PROGMAIN,PROGMAIN ::= COMPARACION PROGMAIN,PROGMAIN ::= COMPARACION PROGMAIN,,,,,,,,,PROGMAIN ::= CONDICIONAL PROGMAIN,,,PROGMAIN ::= PARA PROGMAIN,,PROGMAIN ::= MIENTRAS PROGMAIN
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PARAMETROS,,,PARAMETROS ::= comma id PARAMETROS,,,,PARAMETROS ::= '',,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+FUNCION,,,,,FUNCION ::= function id lparen id PARAMETROS rparen CUERPO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CUERPO,,,,,,,,CUERPO ::= rb PROGMAIN lb,CUERPO ::= lb PROGMAIN rb CUERPOFACT,,,,,,,,,,,,,,,,,,,,,,CUERPO ::= CONDICIONAL,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+OPERADORES,,,,,,,,,,OPERADORES ::= plus,OPERADORES ::= minor,OPERADORES ::= divide,OPERADORES ::= multi,OPERADORES ::= percent,OPERADORES ::= power,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+TYPEVAR,,,,,,,,,,,,,,,,TYPEVAR ::= var,TYPEVAR ::= const,TYPEVAR ::= let,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BOOL,,,,,,,,,,,,,,,,,,,BOOL ::= true,BOOL ::= false,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+TYPEFACT,,,,TYPEFACT ::= id,,,,,,,,,,,,,,,TYPEFACT ::= BOOL,TYPEFACT ::= BOOL,TYPEFACT ::= number,TYPEFACT ::= string,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+EXPRESION,,,,EXPRESION ::= TYPEFACT EXPRESIONFACT,,,,,,,,,,,,,,,EXPRESION ::= TYPEFACT EXPRESIONFACT,EXPRESION ::= TYPEFACT EXPRESIONFACT,EXPRESION ::= TYPEFACT EXPRESIONFACT,EXPRESION ::= TYPEFACT EXPRESIONFACT,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+EXPRESIONFACT,EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',,EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',,EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= OPERADORES EXPRESION,EXPRESIONFACT ::= OPERADORES EXPRESION,EXPRESIONFACT ::= OPERADORES EXPRESION,EXPRESIONFACT ::= OPERADORES EXPRESION,EXPRESIONFACT ::= OPERADORES EXPRESION,EXPRESIONFACT ::= OPERADORES EXPRESION,EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',,,,,,,,,EXPRESIONFACT ::= '',,,EXPRESIONFACT ::= '',EXPRESIONFACT ::= '',EXPRESIONFACT ::= ''
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ASIGNACION,,,,,,,,,,,,,,,,ASIGNACION ::= TYPEVAR id assynament EXPRESION,ASIGNACION ::= TYPEVAR id assynament EXPRESION,ASIGNACION ::= TYPEVAR id assynament EXPRESION,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+COMPARACION,,,,COMPARACION ::= TYPEFACT COMPARATIONSYMBOLS TYPEFACT EXTENDCOMPARATION,,,,,,,,,,,,,,,COMPARACION ::= TYPEFACT COMPARATIONSYMBOLS TYPEFACT EXTENDCOMPARATION,COMPARACION ::= TYPEFACT COMPARATIONSYMBOLS TYPEFACT EXTENDCOMPARATION,COMPARACION ::= TYPEFACT COMPARATIONSYMBOLS TYPEFACT EXTENDCOMPARATION,COMPARACION ::= TYPEFACT COMPARATIONSYMBOLS TYPEFACT EXTENDCOMPARATION,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+COMPARATIONSYMBOLS,,,,,,,,,,,COMPARATIONSYMBOLS ::= minor,,,,,,,,,,,,,COMPARATIONSYMBOLS ::= menorequal,COMPARATIONSYMBOLS ::= greaterequal,COMPARATIONSYMBOLS ::= equality,COMPARATIONSYMBOLS ::= distinct,COMPARATIONSYMBOLS ::= greater,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+LOGICCOMPARATION,,,,,,,,,,,,,,,,,,,,,,,,,,,,,LOGICCOMPARATION ::= and,LOGICCOMPARATION ::= or,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+EXTENDCOMPARATION,EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',,EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',,EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',,,,,,,EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',,,,,,,EXTENDCOMPARATION ::= LOGICCOMPARATION COMPARACION,EXTENDCOMPARATION ::= LOGICCOMPARATION COMPARACION,EXTENDCOMPARATION ::= '',,,EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= '',EXTENDCOMPARATION ::= ''
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CONDICIONAL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CONDICIONAL ::= if lparen COMPARACION rparen CUERPO,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CUERPOFACT,CUERPOFACT ::= '',CUERPOFACT ::= '',,CUERPOFACT ::= '',CUERPOFACT ::= '',,,CUERPOFACT ::= '',CUERPOFACT ::= '',,,,,,,CUERPOFACT ::= '',CUERPOFACT ::= '',CUERPOFACT ::= '',CUERPOFACT ::= '',CUERPOFACT ::= '',CUERPOFACT ::= '',CUERPOFACT ::= '',,,,,,,,,CUERPOFACT ::= '',CUERPOFACT ::= CONDICIONALELSEIF,CUERPOFACT ::= CONDICIONALELSE,CUERPOFACT ::= '',,CUERPOFACT ::= ''
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CONDICIONALELSE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,CONDICIONALELSE ::= else CUERPO,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PARA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,PARA ::= for lparen ASIGNACION semicolon COMPARACION semicolon ASIGNACION rparen CUERPO,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MIENTRAS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MIENTRAS ::= while lparen COMPARACION rparen CUERPO

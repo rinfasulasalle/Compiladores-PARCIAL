@@ -1,0 +1,3 @@
+mientras (a < 10 y b == "hola"){
+  variable c = 19.2    
+}

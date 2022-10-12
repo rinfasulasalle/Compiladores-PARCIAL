@@ -1,0 +1,8 @@
+si ( a <= b y b >=a){
+  variable c = 10
+}sino si ( a <= b y b >=a){
+  variable c = 20
+}sino {
+  variable c = 30
+}
+
